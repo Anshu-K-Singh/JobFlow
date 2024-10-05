@@ -1,0 +1,11 @@
+<h2>Job Openings</h2>
+        {% for job in jobs %}
+            <div class="job">
+                <div class="job-info">
+                    <h3>{{ job['job_name'] }}</h3>
+                    <p>Location: {{ job['location'] }}</p>
+                    <p>Salary: {{ job['Salary'] }}</p>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        {% endfor %}
