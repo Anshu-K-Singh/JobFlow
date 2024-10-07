@@ -2,9 +2,9 @@
         {% for job in jobs %}
             <div class="job">
                 <div class="job-info">
-                    <h3>{{ job['job_name'] }}</h3>
+                    <h3>{{ job['title'] }}</h3>
                     <p>Location: {{ job['location'] }}</p>
-                    <p>Salary: {{ job['Salary'] }}</p>
+                    <p>Salary: {{ job['salary'] }}</p>
                 </div>
                 <button class="apply-btn">Apply</button>
             </div>
