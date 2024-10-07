@@ -1,0 +1,129 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-brand {
+    display: flex; /* Ensure items are aligned properly */
+    align-items: center; /* Center items vertically */
+}
+
+.logo-placeholder {
+    width: 50px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.app-title {
+    font-size: 1.2rem; /* Adjust title font size */
+    color: #fff; /* Make sure title is visible */
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* Position for the overlay effect */
+}
+
+.hero-section {
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.banner {
+    position: relative;
+    height: 100%;
+}
+
+.banner-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+.banner-content {
+    position: absolute; /* Position text over the banner */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    text-align: center;
+    color: #fff; /* White text for contrast */
+}
+
+.banner-content h1 {
+    font-size: 2rem; /* Title font size */
+    margin: 0.5rem 0; /* Spacing */
+}
+
+.banner-content p {
+    font-size: 1rem; /* Subtitle font size */
+    margin: 0.5rem 0; /* Spacing */
+}
+
+/* Call to Action Button */
+.cta-button {
+    background: #777; /* Neutral button */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.cta-button:hover {
+    background: #888; /* Slightly lighter on hover */
+}
+
+/* Job Listings */
+.job-listings {
+    margin: 20px auto;
+    max-width: 600px; /* Smaller width */
+}
+
+.job {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Simple border */
+}
+
+.job-info h3 {
+    font-size: 1.5rem; /* Smaller job title */
+}
+
+.job-info p {
+    font-size: 0.9rem; /* Smaller text for details */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Allow for auto height on mobile */
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem; /* Smaller title on mobile */
+    }
+
+    .banner-content p {
+        font-size: 0.8rem; /* Smaller subtitle on mobile */
+    }
+}

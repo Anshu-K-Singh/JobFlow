@@ -1,157 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobFlow - {{title}}</title>
-    <!-- Bootstrap CDN -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* General Styling */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f6fa;
-        }
-        
-        /* Header Styling */
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 2rem;
-            font-weight: bold;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+{% extends 'base.html' %}
 
-        /* Banner Styling */
-        .banner {
-            width: 100%;
-            height: 250px;
-            background-image: url('static/banner.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        }
+{% block title %}Welcome{% endblock %}
 
-        /* Job Listings */
-        .job-listings {
-            margin: 30px auto;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .job-listings h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #343a40;
-        }
-
-        .job {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-            padding: 15px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            transition: all 0.3s ease;
-        }
-
-        .job:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .job-info h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #007bff;
-        }
-
-        .job-info p {
-            margin: 5px 0 0;
-            color: #6c757d;
-        }
-
-        .apply-btn {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .apply-btn:hover {
-            background-color: #218838;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .job {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .job-info {
-                margin-bottom: 10px;
-            }
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            margin-top: 50px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- App Name at the Top -->
-    <header>
-        JobFlow
-    </header>
-
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-content text-center">
-            Find Your Dream Job!
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-section">
+            <div class="banner">
+                <img src="{{ url_for('static', filename='images/banner.png') }}" alt="Hero Banner" class="banner-image"> <!-- Add your banner image -->
+                <div class="banner-content">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-placeholder">
+                    <h1>Welcome to Our Job Portal</h1>
+                    <p>Your dream job awaits you!</p>
+                    <a href="#job-listings" class="cta-button">Explore Job Openings</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Job Openings Section -->
     <section class="job-listings">
-        {% include 'job_list.html' %}
+        <h2>Job Openings</h2>
+        <div class="job-listings" id="job-listings">
+            {% for job in jobs %}
+                <div class="job">
+                    <div class="job-info">
+                        <h3>{{ job.title }}</h3>
+                        <p>Location: {{ job.location }}</p>
+                        <p>Salary: {{ job.salary }}</p>
+                    </div>
+                    <button><a href="/job/{{ job['id'] }}" class="apply-btn">Apply</a></button>
+                </div>
+            {% endfor %}
+        </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 JobFlow. All rights reserved.
-    </footer>
-
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% endblock %}
