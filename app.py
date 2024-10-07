@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from database import fetch_data_as_dict
+
 app = Flask(__name__)
 
 
@@ -16,8 +17,10 @@ def home_page():
 
 @app.route("/api/jobs")
 def list_jobs():
-    return jsonify(JOBS)
+    query = "SELECT * FROM jobs"
+    data = fetch_data_as_dict(query)
+    return jsonify(data)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', host=10000)
