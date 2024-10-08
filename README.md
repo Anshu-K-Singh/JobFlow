@@ -1,5 +1,5 @@
 
-# ðŸŒŸ **JobFlow** ðŸŒŸ
+# 🌟 **JobFlow** 🌟
 
 Welcome to **JobFlow**! Your go-to platform for browsing job listings and submitting applications with ease. This application provides a simple, user-friendly interface to connect job seekers with employers.
 
