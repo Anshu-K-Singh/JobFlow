@@ -3,11 +3,11 @@
 
 Welcome to **JobFlow**! Your go-to platform for browsing job listings and submitting applications with ease. This application provides a simple, user-friendly interface to connect job seekers with employers.
 
-ðŸ”— **Live Demo:** [JobFlow on Render](https://jobflow-yj2o.onrender.com)
+🔗 **Live Demo:** [JobFlow on Render](https://jobflow-yj2o.onrender.com)
 
 ---
 
-## ðŸ“š **Table of Contents**
+## 📚 **Table of Contents**
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
@@ -18,26 +18,26 @@ Welcome to **JobFlow**! Your go-to platform for browsing job listings and submit
 
 ---
 
-## ðŸš€ **Features**
+## 🚀 **Features**
 
-1. **Browse Job Listings** ðŸ§‘â€ðŸ’»  
+1. **Browse Job Listings** 🧑‍💻  
    Users can explore available job opportunities listed on the platform.
 
-2. **Job Details Page** ðŸ“„  
+2. **Job Details Page** 📄  
    Detailed view of each job, including description, requirements, and application instructions.
 
-3. **Submit Job Listings** ðŸ“  
+3. **Submit Job Listings** 📝  
    Employers can submit new job openings directly from the platform.
 
-4. **Responsive Design** ðŸ“±ðŸ’»  
+4. **Responsive Design** 📱💻  
    The platform adapts to different screen sizes, ensuring a seamless experience on mobile, tablet, and desktop.
 
-5. **Easy Navigation** ðŸ§­  
+5. **Easy Navigation** 🧭  
    Simple and intuitive user interface for hassle-free job hunting and listing.
 
 ---
 
-## ðŸ› ï¸ **Tech Stack**
+## 🛠️ **Tech Stack**
 
 - **Frontend:** HTML, CSS  
 - **Backend:** Python (Flask or Django)  
@@ -46,7 +46,7 @@ Welcome to **JobFlow**! Your go-to platform for browsing job listings and submit
 
 ---
 
-## âš™ï¸ **Setup Instructions**
+## ⚙️ **Setup Instructions**
 
 Follow these steps to set up the project locally:
 
@@ -77,26 +77,26 @@ Navigate to `http://127.0.0.1:5000` in your browser.
 
 ---
 
-## ðŸ“‚ **Project Structure**
+## 📂 **Project Structure**
 
 \`\`\`
 JobFlow/
-â”‚
-â”œâ”€â”€ static/
-â”‚   â”œâ”€â”€ images/             # Images like logos, banners
-â”‚   â””â”€â”€ styles/             # CSS stylesheets
-â”‚
-â”œâ”€â”€ templates/              # HTML templates (base, home, job_detail)
-â”‚
-â”œâ”€â”€ app.py                  # Main application file
-â”œâ”€â”€ database.py             # Database connection and queries
-â”œâ”€â”€ requirements.txt        # Dependencies
-â””â”€â”€ README.md               # Project documentation
+│
+├── static/
+│   ├── images/             # Images like logos, banners
+│   └── styles/             # CSS stylesheets
+│
+├── templates/              # HTML templates (base, home, job_detail)
+│
+├── app.py                  # Main application file
+├── database.py             # Database connection and queries
+├── requirements.txt        # Dependencies
+└── README.md               # Project documentation
 \`\`\`
 
 ---
 
-## ðŸ’¡ **Usage**
+## 💡 **Usage**
 
 ### Browsing Jobs
 1. Visit the [JobFlow Homepage](https://jobflow-yj2o.onrender.com).
@@ -110,7 +110,7 @@ JobFlow/
 
 ---
 
-## ðŸ–¼ï¸ **Screenshots**
+## 🖼️ **Screenshots**
 
 ### Home Page
 ![Home Page](static/images/banner.png)
@@ -120,7 +120,7 @@ JobFlow/
 
 ---
 
-## ðŸ¤ **Contributing**
+## 🤝 **Contributing**
 
 We welcome contributions! To contribute:
 1. Fork the repository.
@@ -129,6 +129,6 @@ We welcome contributions! To contribute:
 
 ---
 
-## ðŸ“œ **License**
+## 📜 **License**
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
